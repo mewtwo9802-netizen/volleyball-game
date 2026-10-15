@@ -19,23 +19,24 @@ public class Driver extends JPanel
 
    public Driver(JFrame fr)
    {
-      header = new JLabel("Volleyball Game");
-      header.setFont(new Font("Arial Bold", Font.PLAIN, 40));
+      header = new JLabel("Volleyball Game"); //no clue*
+      header.setFont(new Font("Arial Bold", Font.PLAIN, 40)); //attempt at setting font for window but doesn't actually work*
       setLayout(new BorderLayout());
    }
+//* could be removed without errors
    
    public static void main(String[] arg)
    {
-      frame = new JFrame("Volleyball");
-      frame.setSize(700,1000);
+      frame = new JFrame("Volleyball Game"); //names the window
+      frame.setExtendedState(JFrame.MAXIMIZED_BOTH); //fills whole screen
       JPanel panel = new JPanel();
-      panel.setBackground(Color.BLACK);
-      panel.setLayout(new FlowLayout());
-      frame.setLocation(0, 0);
+      panel.setBackground(new Color(222, 184, 135)); //sets color by RGB
+      panel.setLayout(new FlowLayout()); //no clue
+      frame.setLocation(0, 0); //no clue
       frame.setContentPane(new Driver(frame));
-      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //ends the run when you close the window
       frame.add(panel);
-      frame.setVisible(true);
+      frame.setVisible(true); //let's it actually open
    }
 
 //    public static void main(String[] args) {
